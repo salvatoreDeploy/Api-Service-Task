@@ -41,8 +41,16 @@ export const routes = [
   },
   {
     method: "PATCH",
-    path: "/task/:id",
-    handler: (req, res) => {},
+    path: buildRoutePath("/task/:id"),
+    handler: (req, res) => {
+      const { id } = req.params;
+
+      connectionDB.update("tasks", id, {
+        completed_at: new Date(),
+      });
+
+      return res.writeHead(204).end();
+    },
   },
   {
     method: "PUT",
@@ -64,7 +72,13 @@ export const routes = [
   },
   {
     method: "DELETE",
-    path: "/task/:id",
-    handler: (req, res) => {},
+    path: buildRoutePath("/task/:id"),
+    handler: (req, res) => {
+      const { id } = req.params;
+
+      connectionDB.delete("tasks", id);
+
+      return res.writeHead(201).end();
+    },
   },
 ];
