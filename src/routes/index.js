@@ -36,8 +36,16 @@ export const routes = [
   },
   {
     method: "GET",
-    path: "/task/taskfilter/:id",
-    handler: (req, res) => {},
+    path: buildRoutePath("/task/taskfilter"),
+    handler: (req, res) => {
+      const { search } = req.query;
+
+      const tasks = connectionDB.select("tasks", {
+        title: search,
+        id: search,
+      });
+      return res.end(JSON.stringify(tasks));
+    },
   },
   {
     method: "PATCH",

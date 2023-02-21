@@ -18,8 +18,17 @@ export class Database {
     fs.writeFile(databasePath, JSON.stringify(this.#databse));
   }
 
-  select(table) {
+  select(table, search) {
     let data = this.#databse[table] ?? [];
+
+    if (search) {
+      data = data.filter((row) => {
+        return Object.entries(search).some(([key, value]) => {
+          if (!value) return true;
+          return row[key].includes(value);
+        });
+      });
+    }
 
     return data;
   }
