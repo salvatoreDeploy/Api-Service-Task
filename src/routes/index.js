@@ -11,6 +11,14 @@ export const routes = [
     handler: (req, res) => {
       const { title, description } = req.body;
 
+      if (!title) {
+        return res.writeHead(400).end(JSON.stringify("Title requierd!"));
+      }
+
+      if (!description) {
+        return res.writeHead(400).end(JSON.stringify("Description requierd!"));
+      }
+
       const task = {
         id: randomUUID(),
         title,
@@ -53,8 +61,19 @@ export const routes = [
     handler: (req, res) => {
       const { id } = req.params;
 
+      const [task] = connectionDB.select("tasks", { id });
+
+      if (!task) {
+        return res.writeHead(404).end(JSON.stringify("Task not exists"));
+      }
+
+      const isTaskCompletd = !!task.completed_at;
+
+      const completed_at = isTaskCompletd ? null : new Date();
+
       connectionDB.update("tasks", id, {
-        completed_at: new Date(),
+        completed_at,
+        updated_at: new Date(),
       });
 
       return res.writeHead(204).end();
@@ -67,13 +86,25 @@ export const routes = [
       const { id } = req.params;
       const { title, description } = req.body;
 
-      const task = {
+      if (!title) {
+        return res.writeHead(400).end(JSON.stringify("Title requierd!"));
+      }
+
+      if (!description) {
+        return res.writeHead(400).end(JSON.stringify("Description requierd!"));
+      }
+
+      const [task] = connectionDB.select("tasks", { id });
+
+      if (!task) {
+        return res.writeHead(404).end(JSON.stringify("Task not exists"));
+      }
+
+      connectionDB.update("tasks", id, {
         title,
         description,
         updated_at: new Date(),
-      };
-
-      connectionDB.update("tasks", id, task);
+      });
 
       return res.writeHead(204).end();
     },
@@ -83,6 +114,12 @@ export const routes = [
     path: buildRoutePath("/task/:id"),
     handler: (req, res) => {
       const { id } = req.params;
+
+      const [task] = connectionDB.select("tasks", { id });
+
+      if (!task) {
+        return res.writeHead(404).end(JSON.stringify("Task not exists"));
+      }
 
       connectionDB.delete("tasks", id);
 
