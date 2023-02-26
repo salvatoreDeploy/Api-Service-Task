@@ -1,0 +1,29 @@
+_id: req_31bd49dd5469496cbf534650fe0e6545
+type: Request
+parentId: wrk_7daad8005fa941adb7bf4406c8a544bd
+modified: 1677408034606
+created: 1676853203244
+url: http://localhost:3333/task
+name: Criar Task
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"title": "concertar telefone",
+    	"description": "telefone ramal inoperante"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1676853203244
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

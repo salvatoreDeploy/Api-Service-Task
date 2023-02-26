@@ -1,0 +1,29 @@
+_id: req_a8637559b4fb439bae1bdb7ff213e4cf
+type: Request
+parentId: wrk_7daad8005fa941adb7bf4406c8a544bd
+modified: 1676937616737
+created: 1676864952535
+url: http://localhost:3333/task/0f363316-deae-4f0c-9756-3e0fb372f780
+name: Atualizar Task
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"title": "concertar rede 2 anda",
+    	"description": "2 andar sem conexão de wifi"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1676595201626.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,21 @@
+_id: req_76a74a72b3cd4d9c99d1240f3f51848b
+type: Request
+parentId: wrk_7daad8005fa941adb7bf4406c8a544bd
+modified: 1677407711473
+created: 1676938247841
+url: http://localhost:3333/task/24a1d6a4-9653-49e3-81cf-ac414f3092a3
+name: Finished Task
+description: ""
+method: PATCH
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1676466200817.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

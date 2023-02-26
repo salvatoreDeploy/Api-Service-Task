@@ -1,0 +1,25 @@
+_id: req_d8d9f70353004e3ab8d480ff7c4e5cf3
+type: Request
+parentId: wrk_7daad8005fa941adb7bf4406c8a544bd
+modified: 1676941241882
+created: 1676940186337
+url: http://localhost:3333/task/taskfilter
+name: Filtrar lista Tasks
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_dcb72644c80e4f0bba2436ce2f0e35b4
+    name: search
+    value: b1a1322e-38aa-421f-8a19-6fe540b05dde
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: -1676858688431
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

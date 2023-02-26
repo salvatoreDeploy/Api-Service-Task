@@ -1,0 +1,21 @@
+_id: req_68183e26d97b403fb9ed1ee47308342e
+type: Request
+parentId: wrk_7daad8005fa941adb7bf4406c8a544bd
+modified: 1677409440915
+created: 1676937506681
+url: http://localhost:3333/task/0f363316-deae-4f0c-9756-3e0fb372f78
+name: Delete Task
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1676937506682
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

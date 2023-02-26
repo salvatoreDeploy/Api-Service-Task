@@ -1,0 +1,21 @@
+_id: req_10a744a63b254809b92f24885e6de47b
+type: Request
+parentId: wrk_7daad8005fa941adb7bf4406c8a544bd
+modified: 1676864231581
+created: 1676864173618
+url: http://localhost:3333/tasks
+name: Listar Tasks
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1676864173618
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
